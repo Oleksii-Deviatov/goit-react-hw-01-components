@@ -2,6 +2,7 @@ import React from "react";
 import SocialProfile from "./SocialProfile/SocialProfile";
 import StatistiscSection from "./StatisticsSection/StatisticsSection";
 import user from "./data/user.json";
+import friends from "./data/friends.json";
 import statisticalData from "./data/statistical_data.json";
 import FriendList from "./FriendList/FriendList";
 
@@ -17,7 +18,7 @@ const App = () => (
       likes={user.stats.likes}
     />
     <StatistiscSection title="Upload stats" stats={statisticalData} />
-    <FriendList />
+    <FriendList friends={friends} />
   </div>
 );
 
