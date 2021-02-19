@@ -21,14 +21,17 @@ const App = () => (
         location={user.location}
         stats={user.stats}
       />
-    </Container> */}
+    </Container>
 
     <Container>
       <StatistiscSection title="Upload stats" stats={statisticalData} />
+    </Container> */}
+
+    <Container>
+      <FriendList friends={friends} />
     </Container>
 
-    <FriendList friends={friends} />
-    <TransactionHistory items={transactions} />
+    {/* <TransactionHistory items={transactions} /> */}
   </div>
 );
 
