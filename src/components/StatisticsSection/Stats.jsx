@@ -2,12 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./styles.module.css";
 
-function generateColor() {
-  return "#" + Math.floor(Math.random() * 16777215).toString(16);
+function color() {
+  const letters = "0123456789ABCDEF".split("");
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.round(Math.random() * 15)];
+  }
+  return color;
 }
 
 const Stats = ({ label, percentage }) => (
-  <li className={styles.item} style={{ backgroundColor: generateColor() }}>
+  <li className={styles.item} style={{ backgroundColor: color() }}>
     <span className={styles.label}>{label}</span>
     <span className={styles.percentage}>{percentage}</span>
   </li>
