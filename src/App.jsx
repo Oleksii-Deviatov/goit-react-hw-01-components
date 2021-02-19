@@ -13,7 +13,7 @@ import transactions from "./data/transactions.json";
 
 const App = () => (
   <div className="app">
-    {/* <Container>
+    <Container>
       <SocialProfile
         name={user.name}
         avatar={user.avatar}
@@ -25,7 +25,7 @@ const App = () => (
 
     <Container>
       <StatistiscSection title="Upload stats" stats={statisticalData} />
-    </Container> */}
+    </Container>
 
     <Container>
       <FriendList friends={friends} />
