@@ -2,19 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Stats from "./stats";
+import styles from "./styles.module.css";
 
 const SocialProfile = ({ name, avatar, tag, location, stats }) => (
-  <>
-    <div key={name} className="profile">
-      <div className="description">
-        <img src={avatar} alt="Аватар пользователя" className="avatar" />
-        <p className="name">{name}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
-      <Stats {...stats} />
+  <div key={name} className={styles.profile}>
+    <div className="description">
+      <img src={avatar} alt="Аватар пользователя" className={styles.avatar} />
+      <p className="name">{name}</p>
+      <p className="tag">@{tag}</p>
+      <p className="location">{location}</p>
     </div>
-  </>
+    <Stats {...stats} />
+  </div>
 );
 
 SocialProfile.propTypes = {

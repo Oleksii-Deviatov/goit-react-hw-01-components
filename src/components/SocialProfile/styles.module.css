@@ -1,0 +1,13 @@
+.profile {
+  margin: 0 auto;
+  height: 200px;
+  width: 100px;
+
+  background-color: #e7ecf2;
+}
+
+.avatar {
+  display: block;
+  width: 100px;
+  height: 100px;
+}

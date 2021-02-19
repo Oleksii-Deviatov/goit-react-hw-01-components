@@ -1,8 +1,8 @@
 import React from "react";
-import SocialProfile from "./SocialProfile/SocialProfile";
-import StatistiscSection from "./StatisticsSection/StatisticsSection";
-import FriendList from "./FriendList/FriendList";
-import TransactionHistory from "./TransactionHistory/TransactionHistory";
+import SocialProfile from "./components/SocialProfile/SocialProfile";
+import StatistiscSection from "./components/StatisticsSection/StatisticsSection";
+import FriendList from "./components/FriendList/FriendList";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 
 import user from "./data/user.json";
 import friends from "./data/friends.json";
