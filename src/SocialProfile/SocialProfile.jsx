@@ -1,15 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SocialProfile = ({
-  name,
-  avatar,
-  tag,
-  location,
-  followers,
-  views,
-  likes,
-}) => (
+import Stats from "./stats";
+
+const SocialProfile = ({ name, avatar, tag, location, stats }) => (
   <>
     <div key={name} className="profile">
       <div className="description">
@@ -18,20 +12,7 @@ const SocialProfile = ({
         <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
       </div>
-      <ul className="stats">
-        <li>
-          <span className="label">Followers </span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views </span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes </span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
+      <Stats {...stats} />
     </div>
   </>
 );
@@ -41,9 +22,11 @@ SocialProfile.propTypes = {
   avatar: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default SocialProfile;
