@@ -1,12 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from "./styles.module.css";
 
-const Stats = ({ label, percentage }) => (
-  <li className="item">
-    <span className="label">{label}</span>
-    <span className="percentage">{percentage}</span>
-  </li>
-);
+function Stats({ label, percentage }) {
+  function generateColor() {
+    return "#" + Math.floor(Math.random() * 16777215).toString(16);
+  }
+
+  return (
+    <li className={styles.item} style={{ backgroundColor: generateColor() }}>
+      <span className={styles.label}>{label}</span>
+      <span className={styles.percentage}>{percentage}</span>
+    </li>
+  );
+}
 
 Stats.propTypes = {
   label: PropTypes.string.isRequired,

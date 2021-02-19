@@ -13,7 +13,7 @@ import transactions from "./data/transactions.json";
 
 const App = () => (
   <div className="app">
-    <Container>
+    {/* <Container>
       <SocialProfile
         name={user.name}
         avatar={user.avatar}
@@ -21,8 +21,12 @@ const App = () => (
         location={user.location}
         stats={user.stats}
       />
+    </Container> */}
+
+    <Container>
+      <StatistiscSection title="Upload stats" stats={statisticalData} />
     </Container>
-    <StatistiscSection title="Upload stats" stats={statisticalData} />
+
     <FriendList friends={friends} />
     <TransactionHistory items={transactions} />
   </div>
