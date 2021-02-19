@@ -24,14 +24,13 @@
 
 .name {
   text-align: center;
-  margin: 0;
-  margin-bottom: 9px;
+  margin: 0px 0px 9px 0px;
+  font-weight: 500;
 }
 
 .tag {
   text-align: center;
-  margin: 0;
-  margin-bottom: 11px;
+  margin: 0px 0px 11px 0px;
   font-size: 13px;
   color: #8f8f8f;
 }
@@ -45,7 +44,6 @@
 
 .stats {
   display: flex;
-  height: 23%;
   padding: 0;
   margin: 0;
 }
@@ -53,7 +51,7 @@
 .list_item {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #f3f6f9;
@@ -62,7 +60,7 @@
   border-top: 1px solid;
   border-color: rgb(216, 216, 216);
   font-size: 11px;
-  padding: 17px;
+  padding: 22px 0px;
 }
 
 .list_item:not(:last-child) {
@@ -72,6 +70,7 @@
 
 .label {
   color: #8f8f8f;
+  margin-bottom: 5px;
 }
 
 .quantity {
