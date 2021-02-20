@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .item {
@@ -14,6 +16,10 @@
   padding: 10px 15px;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   border-radius: 5px;
+}
+
+.item:nth-child(odd) {
+  margin-right: 30px;
 }
 
 .status {
